@@ -27,3 +27,14 @@ const images = [
   "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVubnklMjBjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnVubnklMjBjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
 ];
+
+const displayImage = document.querySelector("#image-display");
+const button = document.querySelector("#image-button");
+
+button.addEventListener("click", function () {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const randomImage = images[randomIndex];
+
+  displayImage.innerHTML = `<img src="${randomImage}" alt="Funny cat">`;
+});
+
